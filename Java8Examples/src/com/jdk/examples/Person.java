@@ -1,5 +1,10 @@
 package com.jdk.examples;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 public class Person {
 	private String name;
     private int age;
@@ -28,6 +33,12 @@ public class Person {
 	@Override
 	public String toString() {
 		return "Person [name=" + name + ", age=" + age + "]";
+	}
+	
+	public static List<Person>getPersons() {
+		List<Person> list = IntStream.range(0, 20).mapToObj(p-> new Person("Name: "+p, 20+p)).collect(Collectors.toList());
+		return list;
+		
 	}
 
 }
