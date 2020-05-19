@@ -1,0 +1,24 @@
+
+d
+java:S11920"IDefine a constant instead of duplicating this literal "lawrence" 3 times.(•½ÊÚşÿÿÿÿ
+b
+java:S1192#"GDefine a constant instead of duplicating this literal "mkyong" 5 times.(ìüœĞüÿÿÿÿ
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(çÔ‹¶şÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(Á÷‚Ï
+S	java:S106"9Replace this use of System.out or System.err by a logger.(íšˆÙùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ÿäïˆıÿÿÿÿ
+M	java:S106)"9Replace this use of System.out or System.err by a logger.(ÕÂ£Y
+S	java:S1068"9Replace this use of System.out or System.err by a logger.(›êŞÂúÿÿÿÿ
+N	java:S106?"9Replace this use of System.out or System.err by a logger.(àÓ¨¨
+S	java:S106K"9Replace this use of System.out or System.err by a logger.(ÄÑ«ùüÿÿÿÿ
+N	java:S106L"9Replace this use of System.out or System.err by a logger.(Ø‡ùà
+N	java:S106P"9Replace this use of System.out or System.err by a logger.(ïåÍÖ
+M	java:S106U"9Replace this use of System.out or System.err by a logger.(Œµ´E
+S	java:S106e"9Replace this use of System.out or System.err by a logger.(îÓššÿÿÿÿÿ
+N	java:S106i"9Replace this use of System.out or System.err by a logger.(üÉ¦¨
+S	java:S106y"9Replace this use of System.out or System.err by a logger.(Î­¢üÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Æã•ûÿÿÿÿ
+N
+java:S1135ˆ"2Complete the task associated to this TODO comment.(» æÿÿÿÿÿ
+R	java:S125Œ"<This block of commented-out lines of code should be removed.(®ÏÇÜ
