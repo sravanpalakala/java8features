@@ -15,5 +15,8 @@ public class MapStreamDemo {
 		
 		List<Integer> personAges = persons.stream().map(Person::getAge).collect(Collectors.toList());
 		System.out.println(personAges.toString());
+		
+		List<Person> age30 = persons.stream().filter(p->p.getAge()>30).collect(Collectors.toList());
+		age30.forEach(Person::print);
 	}
 }

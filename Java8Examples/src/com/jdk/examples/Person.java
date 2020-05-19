@@ -34,6 +34,9 @@ public class Person {
 	public String toString() {
 		return "Person [name=" + name + ", age=" + age + "]";
 	}
+	public void print() {
+		System.out.println("Person [name=" + name + ", age=" + age + "]");
+	}
 	
 	public static List<Person>getPersons() {
 		List<Person> list = IntStream.range(0, 20).mapToObj(p-> new Person("Name: "+p, 20+p)).collect(Collectors.toList());
