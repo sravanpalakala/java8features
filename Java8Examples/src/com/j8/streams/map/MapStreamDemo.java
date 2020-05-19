@@ -18,17 +18,10 @@ public class MapStreamDemo {
 		System.out.println(personAges.toString());
 
 		List<Person> age30 = persons.stream().filter(p -> p.getAge() < 30).collect(Collectors.toList());
-		age30.forEach(Person::print);
-			
-		Comparator<Integer> c = (s1,s2) -> {
-			int l1 = personAges.size();
-			 int l2 = personAges.size();
-			if (l1< l2) return -1;
-			else if (l1>l2) return 1;
-			else return s1.compareTo(s2);
-		};
 		
-		List<Person> sortPersons = persons.stream().sorted().collect(Collectors.toList());
-		sortPersons.forEach(Person::print);
+			
+        
+    	persons.stream().sorted((p1,p2)->p1.age.compareTo(p2.age)).forEach(System.out::println);
+		
 	}
 }

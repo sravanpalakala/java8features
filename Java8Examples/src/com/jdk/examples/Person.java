@@ -9,9 +9,9 @@ import utils.J8Utils;
 
 public class Person implements Comparable<Person>{
 	private String name;
-    private int age;
+    public Integer age;
 
-    public Person(String name, int age) {
+    public Person(String name, Integer age) {
         this.name = name;
         this.age = age;
     }
@@ -24,11 +24,11 @@ public class Person implements Comparable<Person>{
 		this.name = name;
 	}
 
-	public int getAge() {
+	public Integer getAge() {
 		return age;
 	}
 
-	public void setAge(int age) {
+	public void setAge(Integer age) {
 		this.age = age;
 	}
 
@@ -36,24 +36,19 @@ public class Person implements Comparable<Person>{
 	public String toString() {
 		return "Person [name=" + name + ", age=" + age + "]";
 	}
-	public void print() {
-		System.out.println("Person [name=" + name + ", age=" + age + "]");
-	}
+	
 	
 	public static List<Person>getPersons() {
 		List<Person> list = IntStream.range(0, 20).mapToObj(p-> new Person("Name: "+p, J8Utils.getRandomNumber(20, 50))).collect(Collectors.toList());
 		return list;
 		
 	}
-	
+
 	@Override
 	public int compareTo(Person o) {
-//		if(this.age > o.age) {
-//			return -1;
-//		} else if(this.age < o.age ) {
-//			return 0;
-//		}
-		return this.age-o.getAge();
+		// TODO Auto-generated method stub
+		return 0;
 	}
+
 
 }
