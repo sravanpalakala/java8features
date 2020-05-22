@@ -15,19 +15,13 @@ public class StreamsPagination {
 
 		// return string array with items name only
 
-		List<String[]> finalLst =   fetchDispLst(items,0,0,2,2);
+		Stream<String[]> finalLst =   fetchDispLst(items,1,0,4,1);
 		
-		for(String[] s: finalLst) {
-			int i= 0;
-			System.out.println("result:"+s[i]);
-	    	i = i + 2;
-	  
-		}
-	  
+		finalLst.forEach(x->{ int i= 0; System.out.println("final sorted with item column only:"+x[i]);  i++;});
 		    
 	}
 	
-public static List<String[]> fetchDispLst(String[][] items, int sortParam ,int sortOrder ,int itemsPerPage ,int pageNo   ) {
+public static Stream<String[]> fetchDispLst(String[][] items, int sortParam ,int sortOrder ,int itemsPerPage ,int pageNo   ) {
 		 System.out.println("____________________________________");
 	 List<String[]> strmlist = Stream.of(items).sorted((first,second)->  {  
 		 if (sortOrder == 0) { 
@@ -49,9 +43,10 @@ public static List<String[]> fetchDispLst(String[][] items, int sortParam ,int s
 	   	  }
 			 }).collect(Collectors.toList());
 	 
-	 strmlist.subList((pageNo - 1) * itemsPerPage ,  strmlist.size()).forEach(x->{ int i= 0; System.out.println("final sorted:"+x[i]);  i++;});
-	 System.out.println("____________________________________");
-	return strmlist.subList((pageNo - 1) * itemsPerPage ,  strmlist.size());
+	 strmlist.subList((pageNo - 1) * itemsPerPage ,  strmlist.size()).forEach(x->{ int i=0;System.out.println("first col:"+x[i]+"second col:"+x[i+1]+"third col:"+x[i+2]); i++;});
+			 System.out.println("____________________________________");
+	 
+	return strmlist.subList((pageNo - 1) * itemsPerPage ,  strmlist.size()).stream();
 	 
    }
 }
