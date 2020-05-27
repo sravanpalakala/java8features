@@ -22,7 +22,7 @@ public class StreamsPagination {
 	}
 	
 public static Stream<String[]> fetchDispLst(String[][] items, int sortParam ,int sortOrder ,int itemsPerPage ,int pageNo   ) {
-		 System.out.println("____________________________________");
+		
 	 List<String[]> strmlist = Stream.of(items).sorted((first,second)->  {  
 		 if (sortOrder == 0) { 
 	         final String time1 = first[sortParam];
@@ -43,9 +43,8 @@ public static Stream<String[]> fetchDispLst(String[][] items, int sortParam ,int
 	   	  }
 			 }).collect(Collectors.toList());
 	 
-	 strmlist.subList((pageNo - 1) * itemsPerPage ,  strmlist.size()).forEach(x->{ int i=0;System.out.println("first col:"+x[i]+"second col:"+x[i+1]+"third col:"+x[i+2]); i++;});
-			 System.out.println("____________________________________");
-	 
+	// strmlist.subList((pageNo - 1) * itemsPerPage ,  strmlist.size()).forEach(x->{ int i=0;System.out.println("first col:"+x[i]+"second col:"+x[i+1]+"third col:"+x[i+2]); i++;});
+	
 	return strmlist.subList((pageNo - 1) * itemsPerPage ,  strmlist.size()).stream();
 	 
    }
